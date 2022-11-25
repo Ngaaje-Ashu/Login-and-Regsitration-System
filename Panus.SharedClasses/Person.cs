@@ -8,11 +8,7 @@ namespace Panus.SharedClasses
 {
     public class Person
     {
-        public string FirstName
-        {
-            get;
-            set;
-        }
+        public string FirstName { get;  set; }
 
         public string FamilyName { get; set; }
 
@@ -31,13 +27,23 @@ namespace Panus.SharedClasses
 
         public string HowOldWereYou(int year)
         {
+            
+            int currentYear = DateTime.Today.Year;
+
             if (!this.DateOfBirth.HasValue)
             {
                 return "Sorry I do not have a date of birth,I cannnot tell you how old I was";
             }
+            else if(this.DateOfBirth.Value.Year > year){
+                return "You were not yet born";
+
+            }
             else
             {
-                return string.Empty;
+                Console.WriteLine($"The current year is { currentYear}");
+                Console.WriteLine($"You say you were born in the year {this.DateOfBirth.Value.Year}");
+                Console.WriteLine($"You are presently { currentYear - this.DateOfBirth.Value.Year} years old");
+                return $"You were {year - this.DateOfBirth.Value.Year } years Old in the year {year}";
             }
         }
 
