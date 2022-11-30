@@ -25,11 +25,7 @@ namespace Panus.SharedClasses
             this.MessageSent.Invoke(this.DateSent, this.emailMessage);
             Thread.Sleep(5000);
             this.DateDelivered = DateTime.Now;
-            this.MessageDelivered.Invoke(this.DateDelivered.Value);
-        }
-
-        public void Send(EmailMessage message)
-        {
+            //this.MessageDelivered.Invoke(this.DateDelivered.Value);
         }
 
         public bool Delivered() 

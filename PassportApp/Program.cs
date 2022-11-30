@@ -105,7 +105,9 @@ namespace PassportApp
             var message = new EmailMessage
             {
                 SenderEmailAddress = "panus@omnicapital.cm",
+                SenderName = "PANUS Software",
                 RecieverEmailAddress = "coc@gmail.com",
+                RecieverName = "Cameroon Oncology Center",
                 MessageBody = "I hope MediTrak is running well at your facility",
                 Subject = "Client Check-in"
             };
@@ -113,7 +115,7 @@ namespace PassportApp
 
             var courrier = new EmailCourier(message);
             courrier.MessageSent += Courrier_MessageSent;
-            courrier.MessageDelivered += Courrier_MessageDelivered;
+            //courrier.MessageDelivered += Courrier_MessageDelivered;
             courrier.Send();
             Console.WriteLine(courrier.Delivered());
             Console.WriteLine(courrier.DateDelivered);
@@ -123,12 +125,12 @@ namespace PassportApp
 
         private static void Courrier_MessageSent(DateTime dateSent, EmailMessage message)
         {
-            Console.WriteLine($"The date sent was {dateSent} and the message was {message.MessageBody}");
+            Console.WriteLine($"The message was sent at {dateSent} from \n {message.Sender} to \n {message.Reciever}");
         }
 
         private static void Courrier_MessageDelivered(DateTime dateDelivered)
         {
-            Console.WriteLine($"The date delivered was {dateDelivered}");
+            Console.WriteLine($"The message was delivered at {dateDelivered}");
 
         }
     }
