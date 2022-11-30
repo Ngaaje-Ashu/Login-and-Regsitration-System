@@ -67,9 +67,9 @@ namespace PassportApp
             ////var pharmaOrderWithParameter = new PharmacyOrder(DateTime.Today);
             //Console.WriteLine(laboratoryOrder.DateOrdered);
             //Console.WriteLine(laboratoryOrder.SpecimenType);
-            
 
-        
+
+
 
             //var laboratoryOrder = new LaboratoryOrder(new DateTime(2022, 11, 20), "Blood","Malaria");
             //Console.WriteLine(laboratoryOrder.DateOrdered);
@@ -93,16 +93,43 @@ namespace PassportApp
             //var labOrder = LaboratoryOrder.CreateNew();
             //Console.WriteLine(labOrder.SpecimenType);
 
-            var sicknessType = "HIV";
-            var specimenType = LaboratoryOrder.WhichSpecimenIsRequired(sicknessType);
-            Console.WriteLine(specimenType);
+            //var sicknessType = "HIV";
+            //var specimenType = LaboratoryOrder.WhichSpecimenIsRequired(sicknessType);
+            //Console.WriteLine(specimenType);
 
 
-            var cat = new Cat();
-            Console.Write(cat.Speak());
+            //var cat = new Cat();
+            //Console.Write(cat.Speak());
+
+
+            var message = new EmailMessage
+            {
+                SenderEmailAddress = "panus@omnicapital.cm",
+                RecieverEmailAddress = "coc@gmail.com",
+                MessageBody = "I hope MediTrak is running well at your facility",
+                Subject = "Client Check-in"
+            };
+
+
+            var courrier = new EmailCourier(message);
+            courrier.MessageSent += Courrier_MessageSent;
+            courrier.MessageDelivered += Courrier_MessageDelivered;
+            courrier.Send();
+            Console.WriteLine(courrier.Delivered());
+            Console.WriteLine(courrier.DateDelivered);
 
             Console.ReadKey();
         }
- 
+
+        private static void Courrier_MessageSent(DateTime dateSent, EmailMessage message)
+        {
+            Console.WriteLine($"The date sent was {dateSent} and the message was {message.MessageBody}");
+        }
+
+        private static void Courrier_MessageDelivered(DateTime dateDelivered)
+        {
+            Console.WriteLine($"The date delivered was {dateDelivered}");
+
+        }
     }
 }
