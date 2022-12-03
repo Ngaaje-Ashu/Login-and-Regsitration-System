@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32630.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login and Regsitration System", "Login and Regsitration System\Login and Regsitration System.csproj", "{69F48AB4-D087-4BB0-A2B4-FD407504D635}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassportApp", "PassportApp\PassportApp.csproj", "{C4D7FA43-DB89-4604-81C6-33F9F285010D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panus.SharedClasses", "Panus.SharedClasses\Panus.SharedClasses.csproj", "{8C43B653-CA15-493D-B648-B1631EFED149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panus.Outlook", "Panus.Outlook\Panus.Outlook.csproj", "{A2744DD2-B0C6-437F-9D56-9A2D15504883}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8C43B653-CA15-493D-B648-B1631EFED149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C43B653-CA15-493D-B648-B1631EFED149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C43B653-CA15-493D-B648-B1631EFED149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2744DD2-B0C6-437F-9D56-9A2D15504883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2744DD2-B0C6-437F-9D56-9A2D15504883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2744DD2-B0C6-437F-9D56-9A2D15504883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2744DD2-B0C6-437F-9D56-9A2D15504883}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

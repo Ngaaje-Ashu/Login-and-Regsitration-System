@@ -1,4 +1,5 @@
-﻿using Panus.SharedClasses;
+﻿using Humanizer;
+using Panus.SharedClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -101,36 +102,81 @@ namespace PassportApp
             //var cat = new Cat();
             //Console.Write(cat.Speak());
 
+            DoSomething("Hi");
+            DoSomething("Hello");
+            DoSomething("Good morning");
+            
 
-            var message = new EmailMessage
-            {
-                SenderEmailAddress = "panus@omnicapital.cm",
-                SenderName = "PANUS Software",
-                RecieverEmailAddress = "coc@gmail.com",
-                RecieverName = "Cameroon Oncology Center",
-                MessageBody = "I hope MediTrak is running well at your facility",
-                Subject = "Client Check-in"
-            };
+
+
+            var sender = new EmailAddress("panus@omnicapital.cm", "PANUS Software");
+            var receiver = new EmailAddress("coc@omnicapital.cm", "Cameroon oncology center");
+
+
+            var message = new EmailMessage(sender, receiver, "I hope every app works well in your facility".Pluralize());
+            var message2 = new EmailMessage(sender, receiver, "Please do report to us if you encounter any problems".Transform(To.UpperCase));
+            var message3= new EmailMessage(sender, receiver, $"Always check to make sure you have the latest version of MediTrak every {TimeSpan.FromHours(24).Humanize()}");
+            var message4 = new EmailMessage(sender, receiver, "Implement as many security measures as possible".Transform(To.LowerCase));
+            var message5 = new EmailMessage(sender, receiver, "Keep the server online at all times".Transform(To.TitleCase));
+            var message6 = new EmailMessage(sender, receiver, $"Your issued license will expire in {TimeSpan.FromDays(30).Humanize()}".Transform(To.TitleCase));
+            var message7 = new EmailMessage(sender, receiver, "Thank you for accepting to work with us".Transform(To.TitleCase));
+
+            var messages = new List<EmailMessage>();
+
+            messages.Add(message);
+            messages.Add(message2);
+            messages.Add(message3);
+            messages.Add(message4);
+            messages.Add(message5);
+            messages.Add(message6);
+            messages.Add(message7);
+
+
 
 
             var courrier = new EmailCourier(message);
             courrier.MessageSent += Courrier_MessageSent;
-            //courrier.MessageDelivered += Courrier_MessageDelivered;
-            courrier.Send();
+            courrier.MessageDelivered += Courrier_MessageDelivered;
+            courrier.Send(message,(obj) => {
+                obj.MessageBody = $"{obj.MessageBody} Sent from lambda Servers";
+                obj.Hash = Guid.NewGuid();
+            });
+
+            courrier.Send(messages);
+
             Console.WriteLine(courrier.Delivered());
             Console.WriteLine(courrier.DateDelivered);
 
             Console.ReadKey();
         }
 
+        private static void googleMessageModifier(EmailMessage obj)
+        {
+            obj.MessageBody = $"{obj.MessageBody} Sent from GOOGLE Servers";
+            obj.Hash = Guid.NewGuid();
+        }
+
+        private static void appleMessageModifier(EmailMessage msg)
+        {
+            msg.MessageBody = $"{msg.MessageBody} Sent from APPLE Servers";
+            msg.Hash = Guid.NewGuid();
+            msg.SenderEmailAddress = new EmailAddress("info@apple.com");
+        }
+
         private static void Courrier_MessageSent(DateTime dateSent, EmailMessage message)
         {
-            Console.WriteLine($"The message was sent at {dateSent} from \n {message.Sender} to \n {message.Reciever}");
+            Console.WriteLine($"The message was sent at {dateSent} and the message was {message.MessageBody}, the sender is {message.SenderEmailAddress.Address} and has a hash value of {message.Hash}");
         }
 
         private static void Courrier_MessageDelivered(DateTime dateDelivered)
         {
             Console.WriteLine($"The message was delivered at {dateDelivered}");
+
+        }
+
+        private static void DoSomething(string messageDisplayed)
+        {
+           Console.WriteLine(messageDisplayed);
 
         }
     }
