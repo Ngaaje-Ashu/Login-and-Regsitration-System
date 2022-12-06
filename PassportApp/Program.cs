@@ -116,9 +116,9 @@ namespace PassportApp
             var message = new EmailMessage(sender, receiver, "I hope every app works well in your facility".Pluralize());
             var message2 = new EmailMessage(sender, receiver, "Please do report to us if you encounter any problems".Transform(To.UpperCase));
             var message3= new EmailMessage(sender, receiver, $"Always check to make sure you have the latest version of MediTrak every {TimeSpan.FromHours(24).Humanize()}");
-            var message4 = new EmailMessage(sender, receiver, "Implement as many security measures as possible".Transform(To.LowerCase));
-            var message5 = new EmailMessage(sender, receiver, "Keep the server online at all times".Transform(To.TitleCase));
-            var message6 = new EmailMessage(sender, receiver, $"Your issued license will expire in {TimeSpan.FromDays(30).Humanize()}".Transform(To.TitleCase));
+            var message4 = new EmailMessage(sender, receiver, "Implement as many security measures as possible".Transform(To.UpperCase));
+            var message5 = new EmailMessage(sender, receiver, "Keep the server online at all times".Transform(To.UpperCase));
+            var message6 = new EmailMessage(sender, receiver, $"Your issued license will expire in {TimeSpan.FromDays(30).Humanize()}".Transform(To.SentenceCase));
             var message7 = new EmailMessage(sender, receiver, "Thank you for accepting to work with us".Transform(To.TitleCase));
 
             var messages = new List<EmailMessage>();

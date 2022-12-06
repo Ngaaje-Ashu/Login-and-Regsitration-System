@@ -15,6 +15,12 @@ namespace Panus.SharedClasses
             MessageBody = $"{messageBody} {footer}";
             Hash = hash;
         }
+
+        public EmailMessage(EmailAddress sender, EmailAddress receiver, string messageBody)
+        {
+            SenderEmailAddress = sender;
+            RecieverEmailAddress = receiver;
+              }
         public EmailMessage(EmailAddress sender, EmailAddress receiver, string subject, string messageBody)
         {
             SenderEmailAddress = sender;

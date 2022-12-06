@@ -28,113 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxSenderEmailAddress = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ExitButon = new System.Windows.Forms.Button();
+            this.NewMailButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxMessage = new System.Windows.Forms.TextBox();
-            this.textBoxRecieverEmailAddress = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxSubject = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBoxSenderEmailAddress
+            // ExitButon
             // 
-            this.textBoxSenderEmailAddress.Location = new System.Drawing.Point(208, 63);
-            this.textBoxSenderEmailAddress.Name = "textBoxSenderEmailAddress";
-            this.textBoxSenderEmailAddress.Size = new System.Drawing.Size(594, 22);
-            this.textBoxSenderEmailAddress.TabIndex = 0;
-            this.textBoxSenderEmailAddress.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ExitButon.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.ExitButon.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.ExitButon.FlatAppearance.BorderSize = 0;
+            this.ExitButon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ExitButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButon.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButon.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ExitButon.Location = new System.Drawing.Point(1339, 12);
+            this.ExitButon.Name = "ExitButon";
+            this.ExitButon.Size = new System.Drawing.Size(43, 45);
+            this.ExitButon.TabIndex = 0;
+            this.ExitButon.Text = "X";
+            this.ExitButon.UseVisualStyleBackColor = true;
+            this.ExitButon.UseWaitCursor = true;
             // 
-            // button1
+            // NewMailButton
             // 
-            this.button1.Location = new System.Drawing.Point(852, 524);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Send";
-            this.button1.UseVisualStyleBackColor = true;
+            this.NewMailButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.NewMailButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.NewMailButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewMailButton.Location = new System.Drawing.Point(597, 576);
+            this.NewMailButton.Name = "NewMailButton";
+            this.NewMailButton.Size = new System.Drawing.Size(190, 80);
+            this.NewMailButton.TabIndex = 1;
+            this.NewMailButton.Text = "New Mail";
+            this.NewMailButton.UseVisualStyleBackColor = true;
+            this.NewMailButton.UseWaitCursor = true;
             // 
             // label1
             // 
+            this.label1.AllowDrop = true;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 70);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(551, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 16);
+            this.label1.Size = new System.Drawing.Size(319, 44);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Sender\'s Email Address:";
+            this.label1.Text = "PANUS OUTLOOK";
+            this.label1.UseWaitCursor = true;
             // 
-            // textBoxMessage
+            // groupBox1
             // 
-            this.textBoxMessage.Location = new System.Drawing.Point(208, 239);
-            this.textBoxMessage.Multiline = true;
-            this.textBoxMessage.Name = "textBoxMessage";
-            this.textBoxMessage.Size = new System.Drawing.Size(594, 271);
-            this.textBoxMessage.TabIndex = 3;
-            // 
-            // textBoxRecieverEmailAddress
-            // 
-            this.textBoxRecieverEmailAddress.Location = new System.Drawing.Point(208, 105);
-            this.textBoxRecieverEmailAddress.Name = "textBoxRecieverEmailAddress";
-            this.textBoxRecieverEmailAddress.Size = new System.Drawing.Size(594, 22);
-            this.textBoxRecieverEmailAddress.TabIndex = 0;
-            this.textBoxRecieverEmailAddress.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(187, 188);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1015, 309);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.UseWaitCursor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 112);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(78, 132);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Reciever\'s Email Address:";
-            // 
-            // textBoxSubject
-            // 
-            this.textBoxSubject.Location = new System.Drawing.Point(208, 153);
-            this.textBoxSubject.Name = "textBoxSubject";
-            this.textBoxSubject.Size = new System.Drawing.Size(594, 22);
-            this.textBoxSubject.TabIndex = 0;
-            this.textBoxSubject.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 160);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Subject:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(205, 210);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Message Body";
+            this.label2.Size = new System.Drawing.Size(794, 30);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "This is just a sample email courrier. Tap on \"New Mail\" to test features";
+            this.label2.UseWaitCursor = true;
             // 
             // StartUpView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 608);
-            this.Controls.Add(this.textBoxMessage);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ClientSize = new System.Drawing.Size(1394, 706);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBoxSubject);
-            this.Controls.Add(this.textBoxRecieverEmailAddress);
-            this.Controls.Add(this.textBoxSenderEmailAddress);
+            this.Controls.Add(this.NewMailButton);
+            this.Controls.Add(this.ExitButon);
+            this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StartUpView";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "PANUS Outlook";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.StartUpView_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Composer";
+            this.UseWaitCursor = true;
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,15 +126,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBoxSenderEmailAddress;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ExitButon;
+        private System.Windows.Forms.Button NewMailButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxMessage;
-        private System.Windows.Forms.TextBox textBoxRecieverEmailAddress;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxSubject;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
     }
 }
-
