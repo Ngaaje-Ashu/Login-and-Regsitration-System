@@ -20,7 +20,9 @@ namespace Panus.SharedClasses
         {
             SenderEmailAddress = sender;
             RecieverEmailAddress = receiver;
-              }
+            MessageBody = $"{messageBody}";
+        }
+
         public EmailMessage(EmailAddress sender, EmailAddress receiver, string subject, string messageBody)
         {
             SenderEmailAddress = sender;
