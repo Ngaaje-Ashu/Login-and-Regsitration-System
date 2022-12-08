@@ -24,6 +24,7 @@ namespace Panus.SharedClasses
             //messageModifier.Invoke(this);
         }
 
+
         //const string Footer = "Sent from PANUS servers";
         public EmailAddress SenderEmailAddress { get; set; }
 
