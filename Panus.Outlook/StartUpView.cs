@@ -16,7 +16,8 @@ namespace Panus.Outlook
         private void Button_NewMiniMail_Click(object sender, EventArgs e)
         {
             MiniComposerView miniComposerView = new MiniComposerView();
-            miniComposerView.Show();    
+            ComposerViewController controller = new ComposerViewController(miniComposerView);
+            controller.View.ShowDialog();
         }
 
         private void ExitButon_Click(object sender, EventArgs e)

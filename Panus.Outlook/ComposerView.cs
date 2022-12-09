@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Panus.Outlook
 {
-    public partial class ComposerView : Form
+    public partial class ComposerView : Form, IComposerView
     {
 
         public event Action<EmailMessage> SendButtonClicked;
@@ -37,7 +37,7 @@ namespace Panus.Outlook
             //MessageBox.Show(sendConfirmation);
         }
 
-        internal void DisplayConfirmationMessage(string sendConfirmation)
+        public void DisplayConfirmationMessage(string sendConfirmation)
         {
             MessageBox.Show(sendConfirmation);
         }
