@@ -1,6 +1,6 @@
 ﻿namespace Panus.Outlook
 {
-    partial class ComposerView
+    partial class MiniComposerView
     {
         /// <summary>
         /// Required designer variable.
@@ -44,17 +44,17 @@
             // 
             // textBoxSenderEmailAddress
             // 
-            this.textBoxSenderEmailAddress.Location = new System.Drawing.Point(305, 67);
+            this.textBoxSenderEmailAddress.Location = new System.Drawing.Point(261, 56);
             this.textBoxSenderEmailAddress.Name = "textBoxSenderEmailAddress";
-            this.textBoxSenderEmailAddress.Size = new System.Drawing.Size(955, 22);
+            this.textBoxSenderEmailAddress.Size = new System.Drawing.Size(573, 22);
             this.textBoxSenderEmailAddress.TabIndex = 0;
             // 
             // button_SendEmail
             // 
-            this.button_SendEmail.BackColor = System.Drawing.Color.Navy;
+            this.button_SendEmail.BackColor = System.Drawing.Color.Green;
             this.button_SendEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_SendEmail.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button_SendEmail.Location = new System.Drawing.Point(1321, 70);
+            this.button_SendEmail.Location = new System.Drawing.Point(857, 59);
             this.button_SendEmail.Name = "button_SendEmail";
             this.button_SendEmail.Size = new System.Drawing.Size(128, 129);
             this.button_SendEmail.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 66);
+            this.label1.Location = new System.Drawing.Point(12, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 23);
             this.label1.TabIndex = 2;
@@ -76,21 +76,21 @@
             this.textBoxMessage.Location = new System.Drawing.Point(305, 270);
             this.textBoxMessage.Multiline = true;
             this.textBoxMessage.Name = "textBoxMessage";
-            this.textBoxMessage.Size = new System.Drawing.Size(955, 455);
+            this.textBoxMessage.Size = new System.Drawing.Size(493, 244);
             this.textBoxMessage.TabIndex = 3;
             // 
             // textBoxRecieverEmailAddress
             // 
-            this.textBoxRecieverEmailAddress.Location = new System.Drawing.Point(305, 123);
+            this.textBoxRecieverEmailAddress.Location = new System.Drawing.Point(261, 109);
             this.textBoxRecieverEmailAddress.Name = "textBoxRecieverEmailAddress";
-            this.textBoxRecieverEmailAddress.Size = new System.Drawing.Size(955, 22);
+            this.textBoxRecieverEmailAddress.Size = new System.Drawing.Size(573, 22);
             this.textBoxRecieverEmailAddress.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 124);
+            this.label2.Location = new System.Drawing.Point(12, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(216, 23);
             this.label2.TabIndex = 2;
@@ -98,16 +98,16 @@
             // 
             // textBoxSubject
             // 
-            this.textBoxSubject.Location = new System.Drawing.Point(305, 177);
+            this.textBoxSubject.Location = new System.Drawing.Point(261, 165);
             this.textBoxSubject.Name = "textBoxSubject";
-            this.textBoxSubject.Size = new System.Drawing.Size(955, 22);
+            this.textBoxSubject.Size = new System.Drawing.Size(573, 22);
             this.textBoxSubject.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(181, 176);
+            this.label3.Location = new System.Drawing.Point(140, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 23);
             this.label3.TabIndex = 2;
@@ -125,33 +125,33 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Navy;
+            this.groupBox1.BackColor = System.Drawing.Color.Green;
             this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Location = new System.Drawing.Point(2, -9);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(1487, 47);
+            this.groupBox1.Size = new System.Drawing.Size(1012, 47);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Navy;
+            this.btnExit.BackColor = System.Drawing.Color.Green;
             this.btnExit.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnExit.Location = new System.Drawing.Point(1440, 8);
+            this.btnExit.Location = new System.Drawing.Point(954, 8);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(44, 39);
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = false;
             // 
-            // ComposerView
+            // MiniComposerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1484, 789);
+            this.ClientSize = new System.Drawing.Size(1012, 548);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxMessage);
             this.Controls.Add(this.label4);
@@ -163,7 +163,7 @@
             this.Controls.Add(this.textBoxRecieverEmailAddress);
             this.Controls.Add(this.textBoxSenderEmailAddress);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "ComposerView";
+            this.Name = "MiniComposerView";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PANUS Outlook";

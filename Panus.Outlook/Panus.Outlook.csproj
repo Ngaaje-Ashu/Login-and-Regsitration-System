@@ -54,6 +54,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComposerViewController.cs" />
+    <Compile Include="MiniComposerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiniComposerView.Designer.cs">
+      <DependentUpon>MiniComposerView.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartUpView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MiniComposerView.resx">
+      <DependentUpon>MiniComposerView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

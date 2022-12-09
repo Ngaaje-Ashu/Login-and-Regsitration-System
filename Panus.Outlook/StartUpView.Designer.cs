@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button_NewMiniMail = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.NewMailButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.NewMailButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.NewMailButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewMailButton.Location = new System.Drawing.Point(597, 576);
+            this.NewMailButton.Location = new System.Drawing.Point(320, 576);
             this.NewMailButton.Name = "NewMailButton";
             this.NewMailButton.Size = new System.Drawing.Size(190, 80);
             this.NewMailButton.TabIndex = 1;
@@ -101,6 +102,19 @@
             this.label2.Text = "This is just a sample email courrier. Tap on \"New Mail\" to test features";
             this.label2.UseWaitCursor = true;
             // 
+            // button_NewMiniMail
+            // 
+            this.button_NewMiniMail.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button_NewMiniMail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_NewMiniMail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_NewMiniMail.Location = new System.Drawing.Point(795, 576);
+            this.button_NewMiniMail.Name = "button_NewMiniMail";
+            this.button_NewMiniMail.Size = new System.Drawing.Size(190, 80);
+            this.button_NewMiniMail.TabIndex = 1;
+            this.button_NewMiniMail.Text = "New Mini Mail";
+            this.button_NewMiniMail.UseVisualStyleBackColor = true;
+            this.button_NewMiniMail.UseWaitCursor = true;
+            // 
             // StartUpView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -109,6 +123,7 @@
             this.ClientSize = new System.Drawing.Size(1394, 706);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.button_NewMiniMail);
             this.Controls.Add(this.NewMailButton);
             this.Controls.Add(this.ExitButon);
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
@@ -131,5 +146,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button_NewMiniMail;
     }
 }
