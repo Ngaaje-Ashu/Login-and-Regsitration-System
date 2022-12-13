@@ -55,12 +55,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComposerViewController.cs" />
+    <Compile Include="IComposerView.cs" />
     <Compile Include="MiniComposerView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MiniComposerView.Designer.cs">
       <DependentUpon>MiniComposerView.cs</DependentUpon>
     </Compile>
+    <Compile Include="MiniComposerViewController.cs" />
     <Compile Include="StartUpView.cs">
       <SubType>Form</SubType>
     </Compile>

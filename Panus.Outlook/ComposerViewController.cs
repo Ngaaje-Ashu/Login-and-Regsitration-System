@@ -10,7 +10,7 @@ namespace Panus.Outlook
 {
     public class ComposerViewController
     {
-        public ComposerViewController(ComposerView composerView)
+        public ComposerViewController(IComposerView composerView)
         {
             this.View = composerView;
             this.View.SendButtonClicked += View_SendButtonClicked;
@@ -24,6 +24,6 @@ namespace Panus.Outlook
             this.View.DisplayConfirmationMessage(sendConfirmation);
         }
 
-        public ComposerView View { get; }
+        public IComposerView View { get; }
     }
 }
