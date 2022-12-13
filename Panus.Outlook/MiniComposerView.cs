@@ -23,15 +23,12 @@ namespace Panus.Outlook
 
         private void Button_SendEmail_Click(object sender, EventArgs e)
         {
-            //textBox1.Text = "Hi";
-            //MessageBox.Show(textBox1.Text);
             var senderEmailAddress = new EmailAddress(textBoxSenderEmailAddress.Text);
             var receiverEmailAddress = new EmailAddress(textBoxRecieverEmailAddress.Text);
             var subject = textBoxSubject.Text;
             var messageBody = textBoxMessage.Text;
             var message = new EmailMessage(senderEmailAddress, receiverEmailAddress, subject, messageBody);
             this.SendButtonClicked?.Invoke(message);
-            //var courier = new EmailCourier(message);
 
            
         }
