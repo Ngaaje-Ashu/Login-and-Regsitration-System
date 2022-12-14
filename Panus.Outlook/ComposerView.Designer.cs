@@ -1,6 +1,6 @@
 ﻿namespace Panus.Outlook
 {
-    partial class ComposerView
+    partial class LargeComposerView
     {
         /// <summary>
         /// Required designer variable.

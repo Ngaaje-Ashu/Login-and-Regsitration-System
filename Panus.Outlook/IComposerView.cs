@@ -13,6 +13,8 @@ namespace Panus.Outlook
         event Action<EmailMessage> SendButtonClicked;
 
         void DisplayConfirmationMessage(string sendConfirmation);
-        
+
+         void ShowDialog();
+       
     }
 }

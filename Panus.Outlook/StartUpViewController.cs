@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Panus.Outlook
 {
-    internal class StartUpViewController
+    public class StartUpViewController
     {
     }
 }

@@ -4,12 +4,12 @@ using System.Windows.Forms;
 
 namespace Panus.Outlook
 {
-    public partial class ComposerView : Form, IComposerView
+    public partial class LargeComposerView : Form, IComposerView
     {
 
         public event Action<EmailMessage> SendButtonClicked;
 
-        public ComposerView()
+        public LargeComposerView()
         {
             InitializeComponent();
 
@@ -30,7 +30,7 @@ namespace Panus.Outlook
             var messageBody = textBoxMessage.Text;
             var message = new EmailMessage(senderEmailAddress, receiverEmailAddress, subject, messageBody);
             this.SendButtonClicked?.Invoke(message);
-           // var courier = new EmailCourier(message);
+            // var courier = new EmailCourier(message);
 
             //var sendConfirmation = courier.Send();
 
@@ -40,6 +40,10 @@ namespace Panus.Outlook
         public void DisplayConfirmationMessage(string sendConfirmation)
         {
             MessageBox.Show(sendConfirmation);
+        }
+
+        void IComposerView.ShowDialog()
+        {
         }
     }
 }

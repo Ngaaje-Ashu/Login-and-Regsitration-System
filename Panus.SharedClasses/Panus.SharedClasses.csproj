@@ -48,6 +48,7 @@
     <Compile Include="EmailAddress.cs" />
     <Compile Include="EmailCourier.cs" />
     <Compile Include="EmailMessage.cs" />
+    <Compile Include="EmailSendConfirmation.cs" />
     <Compile Include="HospitalServiceOrder.cs" />
     <Compile Include="OutPatientDepartmentOrder.cs" />
     <Compile Include="LaboratoryOrder.cs" />

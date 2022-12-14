@@ -1,28 +1,28 @@
-﻿using Panus.SharedClasses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//using Panus.SharedClasses;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
-namespace Panus.Outlook
-{
-    public class MiniComposerViewController
-    {
-        public MiniComposerViewController(MiniComposerView miniComposerView)
-        {
-            this.View = miniComposerView;
-            this.View.SendButtonClicked += View_SendButtonClicked;
-        }
+//namespace Panus.Outlook
+//{
+//    public class MiniComposerViewController
+//    {
+//        public MiniComposerViewController(IComposerView miniComposerView)
+//        {
+//            this.View = miniComposerView;
+//            this.View.SendButtonClicked += View_SendButtonClicked;
+//        }
 
-        private void View_SendButtonClicked(SharedClasses.EmailMessage emailMessage)
-        {
-            var courier = new EmailCourier(emailMessage);
+//        private void View_SendButtonClicked(SharedClasses.EmailMessage emailMessage)
+//        {
+//            var courier = new EmailCourier(emailMessage);
 
-            var sendConfirmation = courier.Send();
-            this.View.DisplayConfirmationMessage(sendConfirmation);
-        }
+//            var sendConfirmation = courier.Send();
+//            this.View.DisplayConfirmationMessage(sendConfirmation);
+//        }
 
-        public MiniComposerView View { get; }
-    }
-}
+//        public IComposerView View { get; }
+//    }
+//}

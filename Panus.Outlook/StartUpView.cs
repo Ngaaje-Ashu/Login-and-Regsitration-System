@@ -27,7 +27,7 @@ namespace Panus.Outlook
 
         private void NewMailButton_Click(object sender, EventArgs e)
         {
-            ComposerView composeView = new ComposerView();
+            LargeComposerView composeView = new LargeComposerView();
             ComposerViewController controller = new ComposerViewController(composeView);
             controller.View.ShowDialog();
 

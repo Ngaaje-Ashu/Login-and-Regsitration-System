@@ -37,5 +37,9 @@ namespace Panus.Outlook
         {
             MessageBox.Show(sendConfirmation);
         }
+
+        void IComposerView.ShowDialog()
+        {
+        }
     }
 }
