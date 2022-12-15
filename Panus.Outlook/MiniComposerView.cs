@@ -40,6 +40,7 @@ namespace Panus.Outlook
 
         void IComposerView.ShowDialog()
         {
+            this.ShowDialog();
         }
     }
 }

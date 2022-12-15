@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Panus.SharedClasses
 {
-   public class EmailMessage
+    public class EmailMessage
     {
         public EmailMessage(EmailAddress sender, EmailAddress receiver, string messageBody, string footer, Guid hash)
         {

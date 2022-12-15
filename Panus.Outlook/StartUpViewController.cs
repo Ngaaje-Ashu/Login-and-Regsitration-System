@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Panus.Outlook
+﻿namespace Panus.Outlook
 {
     public class StartUpViewController
     {
+        public StartUpViewController(StartUpView startUpView)
+        {
+            this.View = startUpView;
+        }
+        public StartUpView View { get;  }
     }
 }

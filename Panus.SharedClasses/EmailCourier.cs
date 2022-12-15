@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Panus.SharedClasses
 {
-   public class EmailCourier
+    public class EmailCourier
     {
         private EmailMessage emailMessage;
 
@@ -19,8 +16,6 @@ namespace Panus.SharedClasses
         public DateTime? DateDelivered { get; set; }
 
         public List<EmailMessage> Messages { get; set; }
-
-
 
         public string Send()
         {

@@ -6,7 +6,6 @@ namespace Panus.Outlook
 {
     public partial class LargeComposerView : Form, IComposerView
     {
-
         public event Action<EmailMessage> SendButtonClicked;
 
         public LargeComposerView()
@@ -44,6 +43,7 @@ namespace Panus.Outlook
 
         void IComposerView.ShowDialog()
         {
+            this.ShowDialog();
         }
     }
 }
