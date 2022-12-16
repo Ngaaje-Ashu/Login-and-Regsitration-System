@@ -50,16 +50,16 @@ namespace Panus.SharedClasses
             this.MessageDelivered.Invoke(this.DateDelivered.Value);
         }
 
-        public void Send(List<EmailMessage> messages)
-        {
-            messages.ForEach(SendOneAtATime);
-        }
+        //public void Send(List<EmailMessage> messages)
+        //{
+        //    messages.ForEach(SendOneAtATime);
+        //}
 
-        private void SendOneAtATime(EmailMessage m)
-        {
-                m.Hash = Guid.NewGuid();
-                Send(m, null);
-        }
+        //private void SendOneAtATime(EmailMessage m)
+        //{
+        //        m.Hash = Guid.NewGuid();
+        //        Send(m, null);
+        //}
 
         public bool Delivered() 
         {

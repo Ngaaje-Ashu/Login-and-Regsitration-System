@@ -6,6 +6,6 @@
         {
             this.View = startUpView;
         }
-        public StartUpView View { get;  }
+        public StartUpView View { get; set; }
     }
 }
