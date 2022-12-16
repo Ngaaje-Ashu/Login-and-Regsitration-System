@@ -27,6 +27,17 @@ namespace Panus.SharedClasses
             return $"The date delivered was {DateDelivered}";
         }
 
+        public string Send(EmailMessage message, EmailSendConfirmation sendConfirmation)
+        {
+            //this.DateSent = DateTime.Now;
+           // this.MessageSent?.Invoke(this.DateSent, this.emailMessage);
+            Thread.Sleep(5000);
+            sendConfirmation.DateSent = DateTime.Now;
+            this.MessageDelivered?.Invoke(sendConfirmation.DateSent);
+            return $"The date delivered was {sendConfirmation.DateSent}";
+
+        }
+
         public void Send(EmailMessage message, Action<EmailMessage> messageModifier)
         {
             this.DateSent = DateTime.Now;
