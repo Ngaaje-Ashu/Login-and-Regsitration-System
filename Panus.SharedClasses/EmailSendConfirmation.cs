@@ -8,9 +8,9 @@ namespace Panus.SharedClasses
 {
     public class EmailSendConfirmation
     {
-        public EmailSendConfirmation(DateTime dateSent, string deliveryMessage)
+        public EmailSendConfirmation(string deliveryMessage)
         {
-            DateSent = dateSent;
+            //DateSent = dateSent;
             DeliveryMessage = deliveryMessage;
         }
 

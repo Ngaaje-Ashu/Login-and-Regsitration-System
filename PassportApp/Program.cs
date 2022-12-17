@@ -142,7 +142,7 @@ namespace PassportApp
                 obj.Hash = Guid.NewGuid();
             });
 
-            courrier.Send(messages);
+            //courrier.Send(messages);
 
             Console.WriteLine(courrier.Delivered());
             Console.WriteLine(courrier.DateDelivered);

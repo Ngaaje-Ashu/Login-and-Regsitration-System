@@ -16,7 +16,7 @@ namespace Panus.Outlook
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartUpViewController.View);
+            Application.Run(new StartUpViewController.View.Show());
         }
     }
 }

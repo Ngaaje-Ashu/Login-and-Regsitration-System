@@ -12,19 +12,25 @@ namespace Panus.SharedClasses
         {
             this.emailMessage = message;
         }
-        public DateTime DateSent { get; set; }
+
+        private EmailSendConfirmation confirmation;
+        public EmailCourier(EmailSendConfirmation sendConfirmation)
+        {
+            this.confirmation = sendConfirmation;
+        }
+       // public DateTime DateSent { get; set; }
         public DateTime? DateDelivered { get; set; }
 
         public List<EmailMessage> Messages { get; set; }
 
         public string Send()
         {
-            this.DateSent = DateTime.Now;
-            this.MessageSent?.Invoke(this.DateSent, this.emailMessage);
             Thread.Sleep(5000);
-            this.DateDelivered = DateTime.Now;
-            this.MessageDelivered?.Invoke(this.DateDelivered.Value);
-            return $"The date delivered was {DateDelivered}";
+            confirmation.DateSent = DateTime.Now;
+            this.MessageSent?.Invoke(confirmation.DateSent, this.emailMessage);
+            //this.DateDelivered = DateTime.Now;
+            //this.MessageDelivered?.Invoke(this.DateDelivered.Value);
+            return $"The date delivered was {confirmation.DateSent} and the message delivered was {confirmation.DeliveryMessage}";
         }
 
         public string Send(EmailMessage message, EmailSendConfirmation sendConfirmation)
@@ -40,9 +46,9 @@ namespace Panus.SharedClasses
 
         public void Send(EmailMessage message, Action<EmailMessage> messageModifier)
         {
-            this.DateSent = DateTime.Now;
+            confirmation.DateSent = DateTime.Now;
             messageModifier?.Invoke(message);
-            this.MessageSent.Invoke(this.DateSent, message);
+            this.MessageSent.Invoke(confirmation.DateSent, message);
             //Console.WriteLine($"This message will be delivered {DateTime.Now.AddSeconds(5).Humanize()}");
             //Console.WriteLine("Be patient a little longer. Your message is on the way".Truncate(13));
             Thread.Sleep(5000);
