@@ -70,7 +70,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartUpViewController.cs" />
+    <Compile Include="StartUpViewController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="MiniComposerView.resx">
       <DependentUpon>MiniComposerView.cs</DependentUpon>
     </EmbeddedResource>

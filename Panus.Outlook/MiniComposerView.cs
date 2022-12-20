@@ -29,8 +29,6 @@ namespace Panus.Outlook
             var messageBody = textBoxMessage.Text;
             var message = new EmailMessage(senderEmailAddress, receiverEmailAddress, subject, messageBody);
             this.SendButtonClicked?.Invoke(message);
-
-           
         }
 
         public void DisplayConfirmationMessage(string sendConfirmation)
