@@ -20,13 +20,14 @@ namespace Panus.Outlook
 
         private void btnNewMail_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ComposerView page1 = new ComposerView();
-            page1.Show();
+            //this.Hide();
+            ComposerView composeView = new ComposerView();
+            composeView.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             Application.Exit();
         }
     }

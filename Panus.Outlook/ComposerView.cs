@@ -47,11 +47,6 @@ namespace Panus.Outlook
 
         }
 
-        //private void btnExit_Click(object sender, EventArgs e)
-        //{
-        //    Application.Exit();
-        //}
-
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
