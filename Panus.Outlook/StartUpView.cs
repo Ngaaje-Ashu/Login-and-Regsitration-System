@@ -5,8 +5,8 @@ namespace Panus.Outlook
 {
     public partial class StartUpView : Form
     {
-        public event Action<LargeComposerView> NewMailButtonClicked;
-        public event Action<MiniComposerView> NewMiniMailButtonClicked;
+        public event Action<ComposerViewController> NewMailButtonClicked;
+        public event Action<ComposerViewController> NewMiniMailButtonClicked;
         public StartUpView()
         {
             InitializeComponent();
@@ -16,7 +16,6 @@ namespace Panus.Outlook
         private void Button_NewMiniMail_Click(object sender, EventArgs e)
         {
             MiniComposerView miniComposerView = new MiniComposerView();
-            ComposerViewController controller = new ComposerViewController(miniComposerView);
             //controller.View.ShowDialog();
             this.NewMiniMailButtonClicked?.Invoke(miniComposerView);
         }
